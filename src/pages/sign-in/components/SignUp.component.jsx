@@ -53,7 +53,7 @@ const SignUpForm = () => {
       navigateToLibrary();
     }
      catch (error) {console.log(error)}
-    window.location.reload(); 
+  
   };
   
   
