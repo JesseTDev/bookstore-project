@@ -9,13 +9,30 @@ import Card from "../../shared/components/Card.component";
 import SnackBar from "../../shared/components/Snackbar.component";
 import { UserContext } from "../../shared/contexts/UserContext";
 
+const Wrapper = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+`; 
+
 const BooksContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
-`;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 
 export const GENRE_ARRAY = [
   { name: "Fantasy", value: "Fantasy" },
@@ -101,7 +118,7 @@ const getBooksByAuthor = async () => {
     <>
 
     <LibraryFilters handleAuthorChange={handleAuthorChange} GENRE_ARRAY={GENRE_ARRAY} handleGenreSelectChange={handleGenreSelectChange} selectedGenre={selectedGenre} /> 
-
+  <Wrapper>
       {books ? (
         <BooksContainer>
           {books?.map((book) => {
@@ -117,6 +134,7 @@ const getBooksByAuthor = async () => {
       snackbarLabel="Succesfully logged In!"
       snackbarType="success"
        /> 
+      </Wrapper>
     </>
   );
 };

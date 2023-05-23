@@ -35,6 +35,8 @@ const SignInForm = () => {
   } catch (error)  {
   console.log(error); 
   } 
+
+  window.location.reload(); 
 }; 
 
 

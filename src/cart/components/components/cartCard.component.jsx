@@ -13,6 +13,11 @@ const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -21,11 +26,23 @@ const ImageContainer = styled.div`
 
   img {
     width: 200px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 10px;
   }
 `;
 
 const BaseSpan = styled.span`
   width: 23%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `;
 
 const Quantity = styled(BaseSpan)`

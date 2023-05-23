@@ -60,7 +60,6 @@ const NavBar = () => {
         <LogoContainer to="/">
           <CrwnLogo className="logo" />
         </LogoContainer>
-
         <NavLinks>
         {currentUser && currentUser.displayName && (
           <NavLink>
@@ -77,8 +76,6 @@ const NavBar = () => {
   </NavLink>
 )}
           <NavLink to="/library"><FontAwesomeIcon icon={faBook} /> Library</NavLink>
-
-          <NavLink to="/account"><FontAwesomeIcon icon={faUser} /> Account</NavLink>
 
           {currentUser && <NavLink to="/account"><FontAwesomeIcon icon={faUser} /> Account</NavLink>}
 

@@ -9,45 +9,51 @@ import SnackBar from "../../shared/components/Snackbar.component";
 
 const CardContainer = styled.div`
   width: 100%;
-  height: 60vh;
   margin: 12px;
   display: flex;
   justify-content: center;
   transition: 0.3s ease;
-  position: relative; 
+  position: relative;
   &:hover {
     transform: translateY(-15px);
   }
   button {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     align-self: center;
     transition: 0.3s ease;
     &:hover {
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     }
   }
 `;
 
 const InnerCardContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
   cursor: pointer;
   background-color: #eeeeee;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
   border-radius: 30px;
-  height: 80%;
   transition: 0.5s ease;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
 `;
 
 const CardImage = styled.div`
-  height: 400px;
+  height: 300px;
+  width: 200px;
   background-image: url(${(props) => props.imageURL});
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 16px;
 `;
 
 const CardTitle = styled.h2`
@@ -71,9 +77,9 @@ const CardDate = styled.p`
   font-size: 15px;
 `;
 
-const CardRating = styled.div `
+const CardRating = styled.div`
   text-align: center;
-`
+`;
 
 const Card = ({ bookData }) => {
   const { title, imageLinks, authors, categories, publishedDate, averageRating

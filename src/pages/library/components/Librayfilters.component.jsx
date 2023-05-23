@@ -8,12 +8,12 @@ display: flex;
 padding: 24px 0;
 border-bottom: 2px solid lightgray;
 margin: 24px;
-`
+`; 
 
 const StyledText = styled.strong `
     padding-top: 20px;
     margin: 0px 10px; 
-`
+`;
 
 
 const LibraryFilters = ( {selectedGenre, handleGenreSelectChange, GENRE_ARRAY, handleAuthorChange} ) => {
@@ -26,7 +26,7 @@ const LibraryFilters = ( {selectedGenre, handleGenreSelectChange, GENRE_ARRAY, h
      label={'Search by Genre'}
      /> 
      <StyledText>OR</StyledText>
-     <TextField onChange={(e) => handleAuthorChange(e)} sx={{width:'125px'}} id="outlined-basic" label="Search by Author" variant="outlined" />
+     <TextField onChange={(e) => handleAuthorChange(e)} sx={{width:'200px'}} id="outlined-basic" label="Search by Author" variant="outlined" />
        </Container>
     );
 };

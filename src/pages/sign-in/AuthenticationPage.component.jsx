@@ -4,22 +4,23 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   padding: 24px;
-  max-width: 80%;
-  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
-  h2 {
-    margin: 10px 0;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const Wrapper = styled.div`
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
+  margin: 16px;
 `;
 
 const AuthenticationPage = () => {
   return (
     <StyledContainer>
-      <Wrapper>
+      <Wrapper>    
         <SignUpForm />
       </Wrapper>
       <Wrapper>
