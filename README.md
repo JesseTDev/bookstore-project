@@ -1,5 +1,7 @@
 <h3>Project Overview:</h3>
 
+![Screenshot 2023-06-09 at 10 20 44 pm](https://github.com/JesseTDev/bookstore-project/assets/121024534/af3fefb7-032f-43ec-9c16-a5b0ea10f020)
+
 Bookstore project, where users can take advantage of our google intergration to search for books via genre or author. Account details can be saved, and there is a user sign up login flow which intergrates with firebase. Books can be added to a virtual cart and can go through a checkout like process.
 
 <h3>Tech Stack</h3>
